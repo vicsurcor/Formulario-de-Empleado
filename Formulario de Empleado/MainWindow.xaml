@@ -5,8 +5,155 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Formulario_de_Empleado"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="1000" Width="1000">
+
+    <Window.Resources>
+
+        <Style x:Key="Grids" TargetType="Grid">
+
+            <Setter Property="Margin" Value="0,10,0,10"/>
+
+
+        </Style>
+        <Style x:Key="Header" TargetType="TextBlock">
+
+            <Setter Property="Grid.Row" Value="0" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+
+
+        </Style>
+        <Style x:Key="DatosAIntroducir" TargetType="TextBlock">
+
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="FontSize" Value="17" />
+            <Setter Property="FontWeight" Value="Light" />
+            <Setter Property="Margin" Value="10,0,0,0" />
+            <Setter Property="FontFamily" Value="Arial" />
+
+        </Style>
+        <Style x:Key="TextoAIntroducir" TargetType="TextBox">
+
+            <Setter Property="Grid.Column" Value="1" />
+            <Setter Property="Margin" Value="20,0,0,0"/>
+            <Setter Property="Width" Value="350" />
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+
+
+        </Style>
+        <Style x:Key="TextoAIntroducirTel" TargetType="TextBox">
+
+            <Setter Property="Grid.Column" Value="1" />
+            <Setter Property="Margin" Value="20,0,0,0"/>
+            <Setter Property="Width" Value="200" />
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+
+
+        </Style>
         
-    </Grid>
+        
+        
+    </Window.Resources>
+    
+    <Grid>
+                
+         <Grid.RowDefinitions>
+
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+
+        <Border Background="#06665E" CornerRadius="0,0,10,10" BorderThickness="1" BorderBrush="Black">
+
+            <TextBlock Style="{StaticResource Header}">Introduccion de Datos de los Empleados</TextBlock>
+
+        </Border>
+        
+
+        <Grid Grid.Row="1" Style="{StaticResource Grids}">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Style="{StaticResource DatosAIntroducir}">Nombre*  :</TextBlock>
+            <TextBox Style="{StaticResource TextoAIntroducir}"></TextBox>
+
+        </Grid>
+        <Grid Grid.Row="2" Style="{StaticResource Grids}">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Style="{StaticResource DatosAIntroducir}">Apellidos  :</TextBlock>
+            <TextBox Style="{StaticResource TextoAIntroducir}"></TextBox>
+
+        </Grid>
+        <Grid Grid.Row="3" Style="{StaticResource Grids}">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Style="{StaticResource DatosAIntroducir}">E-mail*  :</TextBlock>
+            <TextBox Style="{StaticResource TextoAIntroducir}"></TextBox>
+
+        </Grid>
+        <Grid Grid.Row="4" Style="{StaticResource Grids}">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Style="{StaticResource DatosAIntroducir}">Telefono*  :</TextBlock>
+            <TextBox Style="{StaticResource TextoAIntroducirTel}"></TextBox>
+
+        </Grid>
+        <Grid Grid.Row="5" Style="{StaticResource Grids}">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Style="{StaticResource DatosAIntroducir}">Fecha de nacimiento*  :</TextBlock>
+            <DatePicker  Grid.Column="1" Width="300" HorizontalAlignment="Left"></DatePicker>
+
+        </Grid>
+
+    </Grid>     
+    
 </Window>
