@@ -73,7 +73,38 @@
 
 
         </Style>
-        
+        <Style x:Key="TextoAIntroducirDesc" TargetType="TextBox">
+            
+            <Setter Property="Grid.Row" Value="1" />
+            <Setter Property="Margin" Value="0,20,0,10"/>
+            <Setter Property="Width" Value="600" />
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            
+
+
+        </Style>
+        <Style x:Key="BotonGuardarDesc" TargetType="Button">
+
+            <Setter Property="Grid.Column" Value="0"/>
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Width" Value="90" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="Margin" Value="0,0,20,0"/>
+
+
+        </Style>
+        <Style x:Key="BotonCancelarDesc" TargetType="Button">
+
+                <Setter Property="Grid.Column" Value="1"/>
+                <Setter Property="Height" Value="30" />
+                <Setter Property="Width" Value="90" />
+                <Setter Property="HorizontalAlignment" Value="Right" />
+                <Setter Property="Margin" Value="20,0,0,0"/>
+
+
+        </Style>
+
 
 
     </Window.Resources>
@@ -242,12 +273,70 @@
 
             </Grid>
 
-            <Image Grid.Column="2" Source="recursos\f9whswgwoaauqq0.jfif" Height="130"></Image>
+            <Image Grid.Column="2" Source="recursos\foto.jfif" Height="160"></Image>
             
+            
+
+
+
+        </Grid>
+        <Grid Grid.Row="9" Style="{StaticResource Grids}">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Style="{StaticResource DatosAIntroducir}">Enlace a Red Social :</TextBlock>
+            <TextBox Style="{StaticResource TextoAIntroducir}"></TextBox>
+            
+        </Grid>
+        <Grid Grid.Row="10" Style="{StaticResource Grids}">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Style="{StaticResource DatosAIntroducir}">Rol Actual :</TextBlock>
             
 
         </Grid>
+        <Grid Grid.Row="11" Style="{StaticResource Grids}">
 
+            <Grid.RowDefinitions>
+
+
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                
+
+            </Grid.RowDefinitions>
+
+            <TextBlock Style="{StaticResource DatosAIntroducir}">Descripcion del puesto de trabajo actual :</TextBlock>
+            <TextBox Style="{StaticResource TextoAIntroducirDesc}"></TextBox>
+            <Grid Grid.Row="2">
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Button Style="{StaticResource BotonGuardarDesc}">Guardar</Button>
+                <Button Style="{StaticResource BotonCancelarDesc}">Cancelar</Button>
+
+            </Grid>
+            
+            
+        </Grid>
+        
     </Grid>     
     
 </Window>
