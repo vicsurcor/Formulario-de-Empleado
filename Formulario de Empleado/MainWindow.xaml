@@ -99,7 +99,7 @@
                 <Setter Property="Grid.Column" Value="1"/>
                 <Setter Property="Height" Value="30" />
                 <Setter Property="Width" Value="90" />
-                <Setter Property="HorizontalAlignment" Value="Right" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
                 <Setter Property="Margin" Value="20,0,0,0"/>
 
 
@@ -126,8 +126,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            
+            
 
         </Grid.RowDefinitions>
 
@@ -160,7 +160,7 @@
 
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Column="0" Style="{StaticResource DatosAIntroducir}">Apellidos  :</TextBlock>
+            <TextBlock Grid.Column="0" Style="{StaticResource DatosAIntroducir}">Apellidos*  :</TextBlock>
             <TextBox Style="{StaticResource TextoAIntroducir}"></TextBox>
 
         </Grid>
@@ -200,7 +200,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Style="{StaticResource DatosAIntroducir}">Fecha de nacimiento*  :</TextBlock>
-            <DatePicker  Grid.Column="1" Width="300" HorizontalAlignment="Left"></DatePicker>
+            <DatePicker  Grid.Column="1" Width="272" HorizontalAlignment="Left"></DatePicker>
 
         </Grid>
         <Grid Grid.Row="6" Style="{StaticResource Grids}">
@@ -225,7 +225,7 @@
                 
             </Grid.ColumnDefinitions>
 
-            <TextBlock Style="{StaticResource DatosAIntroducir}">Adjuntar Foto  :</TextBlock>
+            <TextBlock Style="{StaticResource DatosAIntroducir}">Adjuntar Foto*  :</TextBlock>
             <Button x:Name="FotoButton" Grid.Column="1" Width="150" Height="40">Cargar Foto</Button>
             
         </Grid>
@@ -303,6 +303,12 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Style="{StaticResource DatosAIntroducir}">Rol Actual :</TextBlock>
+            <ComboBox Grid.Column="1" Width="200" HorizontalAlignment="Left">
+
+                <ComboBoxItem>Desarrollador</ComboBoxItem>
+                <ComboBoxItem>Analista</ComboBoxItem>
+                
+            </ComboBox>
             
 
         </Grid>
@@ -333,6 +339,12 @@
                 <Button Style="{StaticResource BotonCancelarDesc}">Cancelar</Button>
 
             </Grid>
+            
+            
+        </Grid>
+        <Grid Grid.Row="12" Style="{StaticResource Grids}">
+            
+            
             
             
         </Grid>
