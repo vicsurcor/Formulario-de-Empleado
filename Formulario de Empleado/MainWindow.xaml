@@ -343,8 +343,9 @@
             
         </Grid>
         <Grid Grid.Row="12" Style="{StaticResource Grids}">
-            
-            
+
+            <DataGrid x:Name="Datagrid" Width="600">
+            </DataGrid>
             
             
         </Grid>
