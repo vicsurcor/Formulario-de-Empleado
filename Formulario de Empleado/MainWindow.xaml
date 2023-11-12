@@ -273,7 +273,7 @@
 
             </Grid>
 
-            <Image Grid.Column="2" Source="recursos\foto.jfif" Height="160"></Image>
+            <Image Grid.Column="2" Source="recursos\foto.jpg" Height="160"></Image>
             
             
 
